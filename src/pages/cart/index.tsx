@@ -19,7 +19,7 @@ function Cart() {
           {cart.map((item, index) => (
            
             
-            <CartRow id={item.id} price={item.price} name={item.name} quantity={item.quantity} image={item.image}  />
+            <CartRow key={index} id={item.id} price={item.price} name={item.name} quantity={item.quantity} image={item.image}  />
           ))}
         </table>
       </div>

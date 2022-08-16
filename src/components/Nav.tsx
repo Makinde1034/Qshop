@@ -24,9 +24,7 @@ function Nav() {
       const res = await api.getCategories()
       const categories = await res.json()
       setCategories(categories)
-    } catch (err) {
-      console.log(err)
-    }
+    } catch (err) {}
   }
 
   useEffect(() => {
@@ -41,6 +39,7 @@ function Nav() {
         <ul className="invisible lg:visible xl:visible flex items-center">
           {categories.map((item, index) => (
             <li
+              key={index}
               onClick={() => goToCategory(item.id)}
               className={` ${Number(pathEnd) === index + 1 && 'text-blueish'} mr-10 text-lg cursor-pointer`}
             >
@@ -48,7 +47,7 @@ function Nav() {
             </li>
           ))}
           <Link href="/cart">
-            <li className='cursor-pointer'>Cart</li>
+            <li className="cursor-pointer">Cart</li>
           </Link>
         </ul>
         <input className=" border border-gray rounded-sm pl-2 h-8" type="text" placeholder="Search" />

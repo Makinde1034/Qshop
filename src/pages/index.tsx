@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import Head from 'next/head'
 import Layout from './Layout'
 import api from '../api/index'
 import { useProductsState } from '../state/product/hooks'
@@ -43,7 +42,7 @@ const IndexPage = () => {
     <Layout title="Home">
       <div className="grid lg:grid-cols-3 xl:grid-cols-3 grid-col-1 gap-10 pt-24">
         {products.map((item, index) => (
-          <ProductCard id={item.id} title={item.title} price={item.price} image={item.dummyImage} category={item.category} />
+          <ProductCard key={index} id={item.id} title={item.title} price={item.price} image={item.dummyImage} category={item.category} />
         ))}
       </div>
     </Layout>

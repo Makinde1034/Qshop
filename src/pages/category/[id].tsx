@@ -52,7 +52,7 @@ export default function Category() {
       ) : (
         <div className="grid lg:grid-cols-3 xl:grid-cols-3 grid-col-1 gap-10 pt-24">
           { products.length > 1 && products.map((item, index) => (
-            <ProductCard id={item.id} title={item.title} price={item.price} image={item.dummyImage} category={item.category} />
+            <ProductCard key={index} id={item.id} title={item.title} price={item.price} image={item.dummyImage} category={item.category} />
           ))}
         </div>
       )}

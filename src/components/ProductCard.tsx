@@ -1,10 +1,7 @@
 import React from 'react'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
-import { iteratorSymbol } from 'immer/dist/internal'
-import { _images } from '../db'
 import type { category } from '../interfaces/index'
-import Category from '../pages/category/[id]'
+
 
 interface product {
   id: number
