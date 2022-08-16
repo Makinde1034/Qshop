@@ -1,1 +1,7 @@
-# Next.js + TailwindCSS Boilerplate
+### Qshop-eccommerce
+
+## Stack used
+- NextJs
+- React-redux
+- Tailwindcss
+
