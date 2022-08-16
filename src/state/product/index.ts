@@ -26,10 +26,15 @@ const productSlice = createSlice({
     },
     setRequestFailure(state,action:PayloadAction<boolean>){
       state.err = action.payload
+    },
+
+    // add more products to products state onscroll
+    setNextProductData(state,action: PayloadAction<product[]>){
+      state.products = [...state.products,...action.payload]
     }
   },
 })
 
 export default productSlice.reducer
 
-export const { setLoadingState, setAllProducts, setRequestFailure } = productSlice.actions
+export const { setLoadingState, setAllProducts, setRequestFailure, setNextProductData } = productSlice.actions

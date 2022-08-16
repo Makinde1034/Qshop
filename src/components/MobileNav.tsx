@@ -42,13 +42,13 @@ function MobileNav() {
                 onClick={() => goToCategory(item.id)}
                 className={` ${
                   Number(pathEnd) === index + 1 && 'text-blueish'
-                } font-semibold mb-3 mr-10 text-lg cursor-pointer`}
+                }  mb-3 mr-10 text-lg cursor-pointer`}
               >
                 {item.name}
               </li>
             ))}
             <Link href="/cart">
-              <li className="cursor-pointer font-semibold mb-3">Cart</li>
+              <li className="cursor-pointer  mb-3">Cart</li>
             </Link>
           </ul>
         </div>
