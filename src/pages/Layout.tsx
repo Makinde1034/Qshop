@@ -3,6 +3,7 @@ import React, { ReactNode } from 'react'
 import Head from 'next/head'
 import Nav from '../components/Nav'
 import MobileNav from '../components/MobileNav'
+import Toast from '../components/toast'
 
 type Props = {
   children?: ReactNode
@@ -22,6 +23,7 @@ const Layout = ({ children, title = 'Qshop' }: Props) => (
     </Head>
     <MobileNav />
     <Nav />
+    <Toast />
     <div className='max-w-screen-2xl mx-auto m-auto px-5 xl:px-36 pb-10'>{children}</div>
   </div>
 )

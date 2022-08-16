@@ -5,26 +5,28 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 import storage from 'redux-persist/lib/storage'
 
 // Reducers
-import counterReducer from './counter'
-import quotesReducer from './quotes'
+
 import productReducer from './product'
 import cartReducer from './cart'
+import categoriesReducer from './categories'
+import toastReducer from './toast'
 
 // Persist saves state to the localstorage. Adding a state to the blacklist means you dont want that state to be persisted. It is very useful for some states
 const persistConfig = {
   key: 'root',
   storage,
   version: 1,
-  blacklist: ['quotes','products'],
+  blacklist: ['products'],
 }
 
 const persistedReducer = persistReducer(
   persistConfig,
   combineReducers({
-    counter: counterReducer,
-    quotes: quotesReducer,
+    
     products : productReducer,
-    cart : cartReducer
+    cart : cartReducer,
+    categories : categoriesReducer,
+    toast : toastReducer
   }),
 )
 

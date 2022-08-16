@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useCartState } from '../../state/cart/hooks'
 import { useProductsState } from '../../state/product/hooks'
+import { useToastState } from '../../state/toast/hooks'
 import Layout from '../Layout'
 import type { product } from '../../interfaces'
 
@@ -9,6 +10,7 @@ function Details() {
   const [details, setDetails] = useState<product>()
   const { addProduct } = useCartState()
   const { products } = useProductsState()
+  const { _toggleToast } = useToastState()
   const [count, setCount] = useState(1)
   const router = useRouter()
   const { id } = router.query
@@ -19,7 +21,6 @@ function Details() {
       return products.filter((i) => i.id === Number(id))
     }
     setDetails(product()[0])
- 
   }
 
   // ad  product to cart.
@@ -32,6 +33,11 @@ function Details() {
       id: details.id,
     })
 
+    _toggleToast({ isToastOpen: true, msg: `You added ${details.title} to cart` })
+
+    setTimeout(() => {
+      _toggleToast({ isToastOpen: false, msg: '' })
+    }, 5000)
   }
 
   useEffect(() => {

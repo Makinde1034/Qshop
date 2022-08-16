@@ -3,10 +3,12 @@ import type { cartItem } from '../../interfaces'
 
 interface initialStateProps {
   cart: cartItem[]
+  
 }
 
 const initialState: initialStateProps = {
   cart: [],
+  
 }
 
 const cartSlice = createSlice({
@@ -25,27 +27,27 @@ const cartSlice = createSlice({
 
     removeProductFromCart(state, action: PayloadAction<number>) {
       const filterState = () => {
-        return state.cart.filter((i)=> i.id !== action.payload)
+        return state.cart.filter((i) => i.id !== action.payload)
       }
       state.cart = filterState()
     },
 
-    changeQuantity(state,action:PayloadAction<{id : number, count:number}>){
+    changeQuantity(state, action: PayloadAction<{ id: number; count: number }>) {
       const newState = []
-      for(let i = 0; i < state.cart.length; i++){
-        if(state.cart[i].id === action.payload.id){
+      for (let i = 0; i < state.cart.length; i++) {
+        if (state.cart[i].id === action.payload.id) {
           state.cart[i].quantity = action.payload.count
           newState.push(state.cart[i])
-        }else{
+        } else {
           newState.push(state.cart[i])
         }
-      
       }
       state.cart = newState
-    }
+    },
+    
   },
 })
 
 export default cartSlice.reducer
 
-export const { addProductToCart, removeProductFromCart, changeQuantity } = cartSlice.actions
+export const { addProductToCart, removeProductFromCart, changeQuantity} = cartSlice.actions
