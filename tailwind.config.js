@@ -12,7 +12,14 @@ module.exports = {
       yellowish: '#FFC54D',
       black: '#37352F'
     },
+    fontFamily: {
+      jetmono: ['"JetBrains Mono"', 'monospace'],
+      worksans: ['"Work Sans"', '"sans serif"'],
+      EBG: ['"EB Garamond"', 'serif'],
+      sans:['"Roboto Condensed"','sans-serif']
+    },
     extend: {},
   },
   plugins: [],
 }
+   

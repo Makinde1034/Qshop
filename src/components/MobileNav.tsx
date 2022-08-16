@@ -22,7 +22,11 @@ function MobileNav() {
   return (
     <div className="lg:hidden fixed bg-white  z-20 w-full">
       <nav className="flex justify-between pt-5 px-5">
-        <h3 className="text-2xl font-bold  xl:mb-0">SHOPPER</h3>
+        <Link href='/'>
+          
+          <h3 className="text-2xl font-bold  xl:mb-0">SHOPPER</h3>
+        </Link>
+
         <div onClick={() => setNavOpen(!navOpen)} className="bg-black w-10 p-2 rounded-sm">
           <div className="bg-white h-1 w-full mb-1 rounded-sm"></div>
           <div className="bg-white h-1 w-full mb-1 rounded-sm"></div>
@@ -44,12 +48,11 @@ function MobileNav() {
               </li>
             ))}
             <Link href="/cart">
-              <li className="cursor-pointer">Cart</li>
+              <li className="cursor-pointer font-semibold mb-3">Cart</li>
             </Link>
           </ul>
         </div>
       )}
-    
     </div>
   )
 }

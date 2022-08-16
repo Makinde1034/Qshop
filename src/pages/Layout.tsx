@@ -17,8 +17,7 @@ const Layout = ({ children, title = 'Qshop' }: Props) => (
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;400;500;600;700&EB+Garamond:wght@800&family=Roboto:wght@300;400;500;700;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap"
-        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet"
       />
     </Head>
     <MobileNav />

@@ -26,8 +26,8 @@ function ProductCard({ id, title, price,image,category }: product) {
         <img className="h-full w-full object-cover" alt={title} src={image} />
       </div>
 
-      <p className="text-center mt-5 text-lg">{title} ({category.name})</p>
-      <p className="text-center mt-5">${price}</p>
+      <p className="text-center mt-5  text-xl font-bold">{title} ({category.name})</p>
+      <p className="text-center mt-5 text-lg">${price}</p>
     </div>
   )
 }

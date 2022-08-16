@@ -23,14 +23,14 @@ function Nav() {
       <nav className="flex flex-col lg:flex-row  xl:flex-row justify-center xl:justify-between md:justify-between fixed w-full bg-white items-center py-5 px-5   xl:px-36 max-w-screen-2xl mx-auto m-auto">
         {' '}
         <Link href='/'>
-          <h3 className="text-4xl hidden lg:block font-bold cursor-pointer xl:mb-0">SHOPPER</h3>
+          <h3 className="text-5xl hidden lg:block font-jetmono font-extrabold cursor-pointer xl:mb-0">SHOPPER</h3>
         </Link>
         <ul className="invisible lg:visible xl:visible flex items-center">
           {categoriesList.map((item, index) => (
             <li
               key={index}
               onClick={() => goToCategory(item.id)}
-              className={` ${Number(pathEnd) === index + 1 && 'text-blueish'} mr-10 text-lg cursor-pointer`}
+              className={` ${Number(pathEnd) === index + 1 && 'text-blueish'} mr-10 text-lg cursor-pointer font-sans font-medium`}
             >
               {item.name}
             </li>
