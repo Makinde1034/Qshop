@@ -58,7 +58,7 @@ const IndexPage = () => {
     <Layout title="Home">
       {!err ? (
         isLoading ? (
-          <div>loading...</div>
+          <div className='pt-24'>loading...</div>
         ) : (
           <div className="grid lg:grid-cols-3 xl:grid-cols-3 grid-col-1 gap-10 pt-10 lg:pt-24">
             <div className=" flex justify-center lg:hidden w-full ">
