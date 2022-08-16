@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useCartegoryState } from '../state/categories/hooks'
-import type { category } from '../interfaces'
+
 
 function Nav() {
   const router = useRouter()
