@@ -2,7 +2,7 @@
 
 > E-commerce website. 
 
-Live demo : [https://makinde-helicarrier.netlify.app/](https://qshopp.vercel.app/)
+Live demo : [https://qshopp.vercel.app/](https://qshopp.vercel.app/)
 
 ## Stack used
 - NextJs
