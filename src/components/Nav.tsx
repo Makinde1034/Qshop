@@ -19,8 +19,8 @@ function Nav() {
   }
 
   return (
-    <div className="flex  lg:block justify-center">
-      <nav className="flex flex-col lg:flex-row  xl:flex-row justify-center xl:justify-between md:justify-between fixed w-full bg-white items-center py-5 px-5   xl:px-36 max-w-screen-2xl mx-auto m-auto">
+    <div className="flex   lg:block justify-center">
+      <nav className="flex flex-col lg:flex-row  xl:flex-row justify-center xl:justify-between md:justify-between fixed w-full bg-white items-center  lg:py-5 px-5   xl:px-36 max-w-screen-2xl mx-auto m-auto">
         {' '}
         <Link href='/'>
           <h3 className="text-5xl hidden lg:block font-jetmono font-extrabold cursor-pointer xl:mb-0">SHOPPER</h3>

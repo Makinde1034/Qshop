@@ -103,10 +103,10 @@ const IndexPage = () => {
             <Preloader />
           </div>
         ) : (
-          <div className="grid lg:grid-cols-3 xl:grid-cols-3 grid-col-1 gap-10 pt-10 lg:pt-24 pb-24">
+          <div className="grid lg:grid-cols-3 xl:grid-cols-3 grid-col-1 gap-10 pt-24 lg:pt-24 pb-24">
             <div className=" flex justify-center lg:hidden w-full ">
               <input
-                className="mt-10 lg:mt-0  lg:block  w-full border lg:w-[150px] border-gray rounded-sm pl-2  h-12 outline-none lg:h-8"
+                className=" lg:mt-0  lg:block  w-full border lg:w-[150px] border-gray rounded-sm pl-2  h-12 outline-none lg:h-8"
                 type="text"
                 placeholder="Search"
               />
