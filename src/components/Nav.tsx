@@ -26,7 +26,7 @@ function Nav() {
           <h3 className="text-5xl hidden lg:block font-jetmono font-extrabold cursor-pointer xl:mb-0">SHOPPER</h3>
         </Link>
         <ul className="invisible lg:visible xl:visible flex items-center">
-          {categoriesList.map((item, index) => (
+          {categoriesList.slice(0,6).map((item, index) => (
             <li
               key={index}
               onClick={() => goToCategory(item.id)}
