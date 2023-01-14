@@ -2,7 +2,7 @@ import { type } from "os"
 
 
 export type category = {    
-  id : number | number,
+  id : number 
   name : string,
   image : string
 }
