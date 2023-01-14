@@ -23,3 +23,9 @@ export type cartItem = {
   quantity : number,
   image:string
 }
+
+export type item = {
+  name : string,
+  id: string
+  
+}
